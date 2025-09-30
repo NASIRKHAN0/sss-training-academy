@@ -1,0 +1,1402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Urbanist', 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --primary-color: #158338;
+    --text-color: #121212;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+header {
+    overflow: hidden;
+}
+
+.header-wrapper {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.header-wrapper .logo {
+    max-width: 243px;
+    width: 100%;
+}
+
+.header-wrapper .logo a {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-color);
+    font-weight: 700;
+    width: 100%;
+    display: block;
+    font-size: 21px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+}
+
+.header-wrapper .menu {
+    max-width: 525px;
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+}
+
+.header-wrapper .menu ul {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+}
+
+.header-wrapper .menu ul li:first-child {
+    margin-left: 0;
+}
+
+.header-wrapper .menu ul li {
+    margin-left: 24px;
+}
+
+.header-wrapper .menu ul li:last-child {
+    position: relative;
+    margin-left: 32px;
+    width: 256px;
+}
+
+.header-wrapper .menu ul li a {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: "Urbanist";
+    line-height: 24px;
+
+
+}
+
+.header-wrapper .menu ul li input[type="search"] {
+
+    height: 40px;
+    border: 1px solid #E4E4E7;
+    border-radius: 6px;
+    padding: 0 12px 0 41px;
+    color: #71717A;
+    font-weight: 500;
+    max-width: 256px;
+    width: 100%;
+
+}
+
+.header-wrapper .menu ul li input[type="search"]::placeholder {
+    color: #71717A;
+
+
+}
+
+.header-wrapper .menu ul li input[type="search"]:focus {
+    outline: none;
+}
+
+.header-wrapper .menu ul li .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-wrapper .menu ul li .search-icon i {
+    font-size: 16px;
+}
+
+.header-wrapper .header-socials {
+    max-width: 229px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrapper .header-socials button {
+    font-family: "Urbanist";
+    font-weight: 700;
+
+    font-size: 14px;
+    color: #121212;
+    line-height: 20px;
+    padding: 9px 12px 9px 28px;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+}
+
+.header-wrapper .header-socials button:last-child {
+    background-color: #158338;
+    color: #fff;
+}
+
+.header-wrapper .header-socials button:last-child:hover {
+    background-color: #158338;
+    color: #fff;
+}
+
+.header-wrapper .header-socials button:last-child {
+    background-color: #158338;
+    color: #fff;
+    font-family: "Urbanist";
+    font-weight: 500;
+    border: none;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 6px;
+    width: 112px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+
+}
+
+.sidebar {
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E4E4E7;
+    box-shadow: 0px 2px 4px 0px #00000040;
+    transition: all 0.6s ease-in-out;
+}
+
+.hamburger-icon {
+    overflow: hidden;
+    display: none;
+}
+
+.hamburger-icon span {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+
+
+.header-wrapper.active .sidebar {
+    left: 0px;
+    /* margin-top: 10px; */
+
+}
+
+.header-wrapper.active .sidebar ul li a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: "Urbanist";
+    line-height: 24px;
+
+}
+
+.hamburger-icon.active span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.active span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+    transform: translateX(-45px);
+    overflow: hidden;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* semi-transparent black */
+    z-index: 90;
+    /* below sidebar (which is z-index: 100) */
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+
+}
+
+.sidebar button {
+    display: block;
+    font-family: "Urbanist";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    max-width: 150px;
+    width: 100%;
+
+
+}
+
+.sidebar .icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.sidebar.active ul li:last-child {
+    position: relative;
+
+}
+
+.sidebar input[type="search"] {
+    height: 40px;
+    border: 1px solid #E4E4E7;
+    border-radius: 6px;
+    padding: 0 12px 0 41px;
+    color: #71717A;
+    font-weight: 500;
+    max-width: 256px;
+    width: 100%;
+}
+
+.sidebar .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Show the overlay when the menu is active */
+.header-wrapper.active .overlay {
+    display: block;
+}
+
+/*  banner starts here */
+.banner {
+    background-color: var(--primary-color);
+    /* padding: 16px 0px; */
+
+}
+
+.banner-content {
+    padding: 0px 20px;
+}
+
+.banner-top {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+    padding: 16px 0px;
+}
+
+.banner img {
+    max-width: 87px;
+    height: 31px;
+}
+
+.banner-top p {
+    margin-left: 20px;
+    color: #fff;
+    font-family: "Urbanist";
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+
+}
+
+.banner-container {
+    position: relative;
+}
+
+
+
+.banner-wrapper {
+    background-image: url(../images/banner2.jpg);
+    padding: 175px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.banner-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.banner-wrapper h2 {
+    font-family: "Urbanist";
+    font-weight: 700;
+    font-size: 64px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.banner-wrapper p {
+    font-family: "Urbanist";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #E5E7EB;
+    text-align: center;
+    /* margin-bottom: 32px; */
+    max-width: 864px;
+    width: 100%;
+    margin: 24px auto 32px auto;
+
+}
+
+.banner-wrapper button {
+    padding: 8px 32px;
+    background-color: #FAFAFA;
+    font-family: "Urbanist";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    color: #0F5928;
+
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    /* above overlay */
+
+}
+
+.banner-bottom {
+    padding: 32px 0px;
+}
+
+.banner-bottom p {
+
+    font-family: "Urbanist";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #E5E7EB;
+    text-align: center;
+    /* margin-bottom: 32px; */
+    max-width: 864px;
+    width: 100%;
+    margin: 0 auto 16px auto;
+}
+
+.banner-bottom button {
+    padding: 8px 32px;
+    background-color: #FAFAFA;
+    font-family: "Urbanist";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    color: #0F5928;
+}
+
+.find-courses {
+    padding: 40px 0px;
+    background-color: #F9FAFB;
+}
+
+.find-courses h3 {
+    font-family: "Urbanist";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #111827;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.find-courses p {
+    color: #4B5563;
+    font-family: "Urbanist";
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.course-wrapper {
+    display: grid;
+    grid-template-columns: 452px 192px;
+    gap: 16px;
+    margin: 16px auto;
+    max-width: 660px;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.course-wrapper .course-item {
+    position: relative;
+}
+
+.course-wrapper .course-item input[type="search"] {
+    width: 100%;
+    /* height: 40px; */
+    border: 1px solid #E4E4E7;
+    border-radius: 6px;
+    padding: 13px 13px 13px 41px;
+    color: #71717A;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+}
+
+.course-wrapper .course-item input::placeholder {
+    color: #71717A;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.course-wrapper .course-item input[type="search"]::placeholder {
+    color: #71717A;
+}
+
+.course-wrapper .course-item .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.filter_course {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    gap: 16px;
+    align-items: center;
+    max-width: 192px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 13px 13px;
+    border: 1px solid #E4E4E7;
+    position: relative;
+
+}
+
+.filter_course.active .options {
+    display: block;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 13px 13px;
+}
+
+.filter_course.active .options button {
+    display: block;
+    width: 100%;
+    text-align: start;
+    font-family: "Urbanist";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    border-bottom: 1px solid #0000001a;
+    padding: 8px 12px;
+    margin-bottom: 2px;
+    background-color: transparent;
+
+}
+
+.filter_course p {
+    text-align: start;
+    font-family: "Urbanist";
+    font-weight: 400;
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+}
+
+.filter_course button {
+
+    background-color: #FAFAFA;
+    font-family: "Urbanist";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filter_course .svgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter_course .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.filter_course.active .svgs img {
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin: 48px 0px;
+}
+
+.course-list .course-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #E4E4E7;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.course-list .course-item-img {
+    width: 40px;
+    height: 40px;
+}
+
+.course-list .course-item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.course-list .course-item h6 {
+    font-family: "Urbanist";
+    font-weight: 600;
+
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    color: #111827;
+    margin-top: 16px;
+
+
+}
+
+.course-list .course-item span {
+    font-family: "Urbanist";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6B7280;
+    margin-top: 8px;
+}
+
+.popular-courses {
+    background-color: #F9FAFB;
+    padding: 64px 0px;
+}
+
+.popular-courses-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 48px 0px;
+}
+
+.popular-course {
+    border-radius: 8px;
+    border: 1px solid #E4E4E7;
+    position: relative;
+}
+
+.popular-course .content {
+    padding: 24px;
+}
+
+.popular-courses h3 {
+    font-family: "Urbanist";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #09090B;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.popular-courses p {
+    font-family: "Urbanist";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6B7280;
+    text-align: center;
+}
+
+.popular-courses-list .popular-course-img {
+    width: 100%;
+    height: 192px;
+}
+
+.popular-courses-list .popular-course-img img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.popular-course .content h3 {
+    font-family: 'Urbanist';
+    font-weight: 700;
+    font-size: 18px;
+    color: #09090B;
+    line-height: 28px;
+    margin-bottom: 13px;
+    text-align: start;
+}
+
+.popular-course .content p {
+    font-family: "Urbanist";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4B5563;
+    text-align: start;
+}
+
+.popular-course .content .popular-course-bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.popular-course .content .popular-course-bottom-wrapper .popular-course-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.popular-course-wrapper-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular-course-top {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    width: calc(100% - 45px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 8px; */
+
+}
+
+.popular-course-top span {
+    background-color: var(--primary-color);
+    color: #FAFAFA;
+    padding: 3px 11px;
+    border-radius: 50px;
+    font-family: "Urbanist";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.popular-course-top .icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.popular-course button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: "Urbanist";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    max-width: 95%;
+    width: 100%;
+    margin-top: 9px;
+}
+
+.video-section {
+    padding: 50px 0px;
+}
+
+.video-section h3 {
+    font-family: "Urbanist";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-section p {
+    font-family: "Urbanist";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.video-item {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0px 2px 4px 0px #00000040;
+    border-radius: 12px;
+    margin-top: 16px;
+    height: 484px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+}
+
+.video-item video {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+.video-wrapper .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+/*  new news and updates  css starts here */
+
+.news-and-updates {
+    padding: 72px 0px 51px 0px;
+}
+
+.news-and-updates h3 {
+    font-family: "Urbanist";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #09090B;
+    text-align: center;
+    margin-bottom: 11px;
+}
+
+.news-and-updates p {
+    font-family: "Urbanist";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6B7280;
+    text-align: center;
+}
+
+.news-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 33px;
+    padding-top: 48px;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #E4E4E7;
+}
+
+.news-card .news-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+
+}
+
+.news-card .news-top span {
+    color: #18181B;
+    font-family: "Urbanist";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #e5e5e7;
+    text-align: center;
+    border-radius: 40px;
+    max-width: 84px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-card .news-top div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 4px;
+}
+
+.news-card h3 {
+    font-family: 'Urbanist';
+    font-weight: 600;
+    text-align: start;
+    font-size: 18px;
+    color: #09090B;
+
+    line-height: 28px;
+    margin-bottom: 21px;
+
+
+}
+
+
+.news-card p {
+    color: #71717A;
+    font-family: "Urbanist";
+    font-weight: 400;
+
+    font-size: 14px;
+    text-align: start;
+    line-height: 20px;
+
+}
+
+.news-card button {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 9.5px 4px 9.5px 0px;
+    cursor: pointer;
+
+    font-weight: 500;
+
+    font-size: 14px;
+
+    line-height: 20px;
+    margin-top: 20px;
+
+
+}
+
+.news-card button img {
+    margin-left: 11px;
+}
+
+footer {
+    background-color: #111827;
+    padding: 48px 0px;
+
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+footer li a,
+footer p {
+
+    color: #9CA3AF;
+    font-family: "Urbanist";
+    font-weight: 400;
+    font-size: 16px;
+
+    line-height: 24px;
+
+
+}
+
+footer .logo-img,
+footer h3 {
+    margin-bottom: 16px;
+
+}
+
+.footer-socials {
+    margin-top: 16px;
+    display: flex;
+}
+
+.footer-socials img {
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.footer-links h3 {
+    color: #FFFFFF;
+    font-family: "Urbanist";
+    font-weight: 600;
+
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 16px;
+
+
+
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links ul li a {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.separator {
+    border-bottom: 1px solid #1F2937;
+    margin: 32px 0px;
+
+}
+
+.copyright {
+    text-align: center;
+}
+
+/* responsivenss start here */
+
+@media only screen and (max-width:1200px) {
+    .container {
+        padding: 0px 20px;
+
+    }
+
+    .header-wrapper .header-socials {
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .header-wrapper .header-socials button {
+        padding-left: 10px;
+    }
+
+    .header-wrapper .menu ul li {
+        margin-left: 16px;
+    }
+
+    .header-wrapper .menu ul li:last-child {
+        margin-left: 20px;
+    }
+
+    .header-wrapper .logo a {
+        font-size: 17px;
+    }
+
+    .header-wrapper .logo {
+        max-width: unset;
+        width: unset;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .header-wrapper .menu {
+        display: none;
+    }
+
+    .header-wrapper .header-socials {
+        display: none;
+    }
+
+    .banner-wrapper {
+        padding: 60px 0px;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .banner-wrapper h2 {
+        font-size: 45px;
+        line-height: 52px;
+    }
+
+    .banner-wrapper p,
+    .banner-bottom p {
+
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 24px 0px 0px 0px;
+    }
+
+    .popular-courses {
+        padding: 30px 0px;
+    }
+
+    .popular-courses-list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 0px 0px 0px;
+    }
+
+    .popular-course .content h3 {
+        font-size: 17px;
+    }
+
+    .video-section {
+        padding: 30px 0px;
+    }
+
+    .video-item {
+        max-height: 300px;
+    }
+
+    .news-and-updates {
+        padding: 30px 0px;
+    }
+
+    .news-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer-wrapper .footer-links {
+        text-align: center;
+    }
+
+    .footer-wrapper .footer-links:nth-child(3) {
+        text-align: start;
+    }
+
+    footer {
+
+        padding: 30px 0px;
+    }
+
+    .separator {
+        margin: 22px 0px;
+    }
+
+    footer p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .popular-courses h3 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+
+}
+
+@media only screen and (max-width:768px) {
+    .banner-top p {
+        font-weight: 500;
+    }
+
+    .banner-wrapper {
+        padding: 35px 0px;
+    }
+
+    .banner-wrapper h2 {
+        font-size: 30px;
+        line-height: 43px;
+        font-weight: 500;
+    }
+
+    .banner-wrapper p,
+    .banner-bottom p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .banner-bottom {
+        padding: 20px 0px;
+    }
+
+    .banner-bottom p {
+        margin: 0px auto 20px auto
+    }
+
+    .course-wrapper {
+        grid-template-columns: 1fr 192px;
+    }
+
+    .find-courses {
+        padding: 30px 0px;
+    }
+
+    .popular-course .content h3 {
+        min-height: 56px;
+    }
+
+    .popular-course .content h3 {
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    .video-section {
+        padding: 30px 0px 20px 0px;
+    }
+
+    .video-item {
+        max-height: 250px;
+    }
+
+
+}
+
+@media only screen and (max-width:640px) {
+    .banner-top p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .banner-wrapper h2 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .banner-wrapper p {
+        line-height: 19px;
+        margin: 10px auto 15px auto
+    }
+
+    .banner-wrapper button {
+        padding: 6px 25px;
+
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .find-courses h3 {
+
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .find-courses p {
+
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .popular-courses-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .popular-course .content h3 {
+        font-size: 17px;
+        line-height: 24px;
+        min-height: unset;
+    }
+
+    .video-section h3 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 16px;
+    }
+
+    .video-section p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .news-and-updates h3 {
+        font-size: 16px;
+
+        line-height: 22px;
+        margin-bottom: 14px;
+    }
+
+    .news-card button {
+        margin-top: 10px;
+    }
+
+    .news-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    .banner-bottom button {
+
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .header-wrapper.active .sidebar {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .banner-top {
+        flex-direction: column;
+
+    }
+
+    .banner-top p {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .find-courses {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+
+    .filter_course {
+        max-width: 100%;
+    }
+
+    .course-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-course button {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-wrapper .footer-links {
+        text-align: start;
+    }
+
+    .popular-courses h3 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .news-card p {
+        font-size: 13px;
+    }
+
+    .popular-courses p {
+
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+/* responsivenss ends here */

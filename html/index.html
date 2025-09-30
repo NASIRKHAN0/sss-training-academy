@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- link me the Inter font family -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <!-- connect the Urbanist font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="#">SSS Training Academy</a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">About SSS</a></li>
+                        <li><input type="search" placeholder="Search Courses...">
+                            <div class="search-icon">
+                                <img src="../svgs/search.svg" alt="search">
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="header-socials">
+                    <img src="../svgs/save.svg" alt="save">
+                    <button>Register</button>
+                    <button>Login</button>
+                </div>
+                <div class="hamburger-icon" onclick="handlesidebar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="overlay"></div>
+                <!--  add a sidebat menu thai will all the element if menu and header socials -->
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">About SSS</a></li>
+                        <li style="position: relative;"><input type="search" placeholder="Search Courses...">
+                            <div class="search-icon">
+                                <img src="../svgs/search.svg" alt="search">
+                            </div>
+                        </li>
+                        <button>Register</button>
+                        <button>Login</button>
+
+                        <div class="icon">
+                            <img src="../svgs/cross.svg" alt="cross">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--  header ends here -->
+    <!-- banner starts here -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-top">
+                <div class="img">
+                    <img src="../images/banner-top.png" alt="banner-top">
+                </div>
+                <p>Get your passports now directly from SSS Competency Passports. 10% off for SSCP Passport holders! Get
+                    My Passport </p>
+            </div>
+
+        </div>
+        <div class="banner-container">
+            <div class="banner-wrapper">
+                <div class="banner-content">
+                    <h2>Competency-Based Learning</h2>
+                    <p>Practical, skills-focused training designed for working professionals who demand results.</p>
+                    <button>Start Learning Today </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="banner-bottom">
+            <p>Get your discounted courses with a SSS Competency Passport. </p>
+            <button>Click here to find out how! </button>
+        </div>
+    </section>
+    <!--  banner ends here -->
+    <!--  find courses starts here     -->
+    <section class="find-courses">
+        <div class="container">
+            <h3>Find Your Perfect Course</h3>
+            <p>Choose from our specialized training sectors across multiple countries.</p>
+            <div class="course-wrapper">
+                <div class="course-item"><input type="search" placeholder="Search Courses...">
+                    <div class="search-icon">
+                        <img src="../svgs/search.svg" alt="search">
+                    </div>
+                </div>
+
+                <div class="filter_course" onclick="toggleClass()">
+                    <p>Select Country</p>
+
+                    <div class="svgs">
+                        <img src="../svgs/arrow-down.svg" alt="arrow-down">
+                    </div>
+                    <div class="options">
+                        <button>All</button>
+                        <button>All</button>
+                        <button>All</button>
+                    </div>
+                </div>
+            </div>
+            <div class="course-list">
+                <div class="course-item">
+                    <div class="course-item-img">
+                        <img src="../svgs/safety.svg" alt="course-item">
+                    </div>
+                    <h6>Safety Management</h6>
+                    <span>24 Courses</span>
+                </div>
+                <div class="course-item">
+                    <div class="course-item-img">
+                        <img src="../svgs/security.svg" alt="security-item">
+                    </div>
+                    <h6>Security
+                        Operations</h6>
+                    <span>24 Courses</span>
+                </div>
+                <div class="course-item">
+                    <div class="course-item-img">
+                        <img src="../svgs/sustainibilty.svg" alt="sustainibilty-item">
+                    </div>
+                    <h6>Sustainability</h6>
+                    <span>24 Courses</span>
+                </div>
+                <div class="course-item">
+                    <div class="course-item-img">
+                        <img src="../svgs/risk.svg" alt="risk-item">
+                    </div>
+                    <h6>Risk Assessment </h6>
+                    <span>24 Courses</span>
+                </div>
+                <div class="course-item">
+                    <div class="course-item-img">
+                        <img src="../svgs/emergency.svg" alt="emergency-item">
+                    </div>
+                    <h6>Emergency Response</h6>
+                    <span>24 Courses</span>
+                </div>
+
+                <div class="course-item">
+                    <div class="course-item-img">
+                        <img src="../svgs/environmental.svg" alt="environmental-item">
+                    </div>
+                    <h6>Environmental</h6>
+                    <span>24 Courses</span>
+                </div>
+
+
+
+            </div>
+
+    </section>
+    <!--  find courses ends here -->
+
+    <!--  popular Courses starts here -->
+    <section class="popular-courses">
+        <div class="container">
+            <h3>Popular Courses</h3>
+            <p>
+                Join thousands of professionals advancing their careers
+            </p>
+        </div>
+        <div class="container">
+            <div class="popular-courses-list">
+                <div class="popular-course">
+                    <div class="popular-course-img">
+                        <img src="../svgs/course.png" alt="course-item">
+                    </div>
+                    <div class="content">
+                        <h3>Certified Safety Manager
+                            Professional</h3>
+                        <p>Comprehensive safety management
+                            certification covering risk assessment,
+                            incident investigation, and safety</p>
+                        <div class="popular-course-bottom-wrapper">
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/times.svg" alt="times">
+                                </div>
+                                <p>7 weeks</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/person.svg" alt="person">
+                                </div>
+                                <p>743</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/star.svg" alt="star">
+                                </div>
+                                <strong>4.5</strong>
+                            </div>
+                        </div>
+                        <button>Enroll Now</button>
+                    </div>
+                    <div class="popular-course-top">
+                        <span>Popular</span>
+                        <div class="icon">
+                            <img src="../svgs/save.svg" alt="heart">
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-course">
+                    <div class="popular-course-img">
+                        <img src="../svgs/course.png" alt="course-item">
+                    </div>
+                    <div class="content">
+                        <h3>Sustainable Business
+                            Practices</h3>
+                        <p>Comprehensive safety management
+                            certification covering risk assessment,
+                            incident investigation, and safety</p>
+                        <div class="popular-course-bottom-wrapper">
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/times.svg" alt="times">
+                                </div>
+                                <p>7 weeks</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/person.svg" alt="person">
+                                </div>
+                                <p>743</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/star.svg" alt="star">
+                                </div>
+                                <strong>4.5</strong>
+                            </div>
+                        </div>
+                        <button>Enroll Now</button>
+                    </div>
+                    <div class="popular-course-top">
+                        <span>Popular</span>
+                        <div class="icon">
+                            <img src="../svgs/save.svg" alt="heart">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popular-course">
+                    <div class="popular-course-img">
+                        <img src="../svgs/course.png" alt="course-item">
+                    </div>
+                    <div class="content">
+                        <h3>Certified Safety Manager
+                            Professional</h3>
+                        <p>Comprehensive safety management
+                            certification covering risk assessment,
+                            incident investigation, and safety</p>
+                        <div class="popular-course-bottom-wrapper">
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/times.svg" alt="times">
+                                </div>
+                                <p>7 weeks</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/person.svg" alt="person">
+                                </div>
+                                <p>743</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/star.svg" alt="star">
+                                </div>
+                                <strong>4.5</strong>
+                            </div>
+                        </div>
+                        <button>Enroll Now</button>
+                    </div>
+                    <div class="popular-course-top">
+                        <span>Popular</span>
+                        <div class="icon">
+                            <img src="../svgs/save.svg" alt="heart">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popular-course">
+                    <div class="popular-course-img">
+                        <img src="../svgs/course.png" alt="course-item">
+                    </div>
+                    <div class="content">
+                        <h3>Sustainable Business
+                            Practices</h3>
+                        <p>Comprehensive safety management
+                            certification covering risk assessment,
+                            incident investigation, and safety</p>
+                        <div class="popular-course-bottom-wrapper">
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/times.svg" alt="times">
+                                </div>
+                                <p>7 weeks</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/person.svg" alt="person">
+                                </div>
+                                <p>743</p>
+                            </div>
+                            <div class="popular-course-wrapper">
+                                <div class="popular-course-wrapper-item">
+                                    <img src="../svgs/star.svg" alt="star">
+                                </div>
+                                <strong>4.5</strong>
+                            </div>
+                        </div>
+                        <button>Enroll Now</button>
+                    </div>
+                    <div class="popular-course-top">
+                        <span>Popular</span>
+                        <div class="icon">
+                            <img src="../svgs/save.svg" alt="heart">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--  popular Courses ends here -->
+
+    <!-- video section starts here -->
+    <section class="video-section">
+        <div class="container">
+            <h3>Discover SSS Training Academy</h3>
+            <p>Learn how our comprehensive training programs can transform your professional journey</p>
+        </div>
+        <div class="container">
+            <div class="video-wrapper">
+                <div class="video-item">
+                    <video src="" autoplay muted loop controls></video>
+                </div>
+                <div class="play-btn">
+                    <img src="../svgs/play.svg" alt="play">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- video section ends here -->
+
+    <!--  section news and updates starts here   -->
+    <section class="news-and-updates">
+        <div class="container">
+            <h3>Latest News & Updates</h3>
+            <p>Stay informed about our latest developments and achievements</p>
+            <div class="news-wrapper">
+                <div class="news-card">
+                    <div class="news-top">
+                        <span>Partnership</span>
+                        <div>
+                            <div class="icon">
+                                <img src="../svgs/calendar.svg" alt="calendar">
+                            </div>
+                            <p>29 Sep 2025</p>
+                        </div>
+                    </div>
+                    <h3>New NOCN Partnership Launches
+                        Advanced Certifications</h3>
+                    <p>We're excited to announce our partnership with NOCN,
+                        bringing internationally recognized certifications to our
+                        platform.</p>
+
+                    <button>Read More
+                        <img src="../svgs/angle-right.svg" alt="angle-right">
+                    </button>
+                </div>
+                <div class="news-card">
+                    <div class="news-top">
+                        <span>Partnership</span>
+                        <div>
+                            <div class="icon">
+                                <img src="../svgs/calendar.svg" alt="calendar">
+                            </div>
+                            <p>29 Sep 2025</p>
+                        </div>
+                    </div>
+                    <h3>Spring 2024 Course Schedule Now
+                        Available</h3>
+                    <p>Explore our expanded course offerings for Spring
+                        2024, including new specializations in cybersecurity
+                        and environmental management.</p>
+
+                    <button>Read More
+                        <img src="../svgs/angle-right.svg" alt="angle-right">
+                    </button>
+                </div>
+                <div class="news-card">
+                    <div class="news-top">
+                        <span>Partnership</span>
+                        <div>
+                            <div class="icon">
+                                <img src="../svgs/calendar.svg" alt="calendar">
+                            </div>
+                            <p>March 5, 2024</p>
+                        </div>
+                    </div>
+                    <h3>Student Success: 95% Certification Pass
+                        Rate</h3>
+                    <p>Our students continue to excel with a 95% pass rate on
+                        professional certification exams across all programs.</p>
+
+                    <button>Read More
+                        <img src="../svgs/angle-right.svg" alt="angle-right">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--  section news and updates ends here   -->
+    <!--  section   footer  starts here  -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="logo-img">
+                        <img src="../images/footer-logo.png" alt="footer-logo">
+                    </div>
+                    <p>Empowering professionals with world-
+                        class training in Safety, Security, and
+                        Sustainability.</p>
+                    <div class="footer-socials">
+                        <a href="#"><img src="../svgs/facebook.svg" alt="facebook"></a>
+                        <a href="#"><img src="../svgs/twitter.svg" alt="twitter"></a>
+                        <a href="#"><img src="../svgs/instagram.svg" alt="instagram"></a>
+                        <a href="#"><img src="../svgs/linkedin.svg" alt="linkedin"></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">All Courses</a></li>
+                        <li><a href="#">Certifications</a></li>
+                        <li><a href="#">Corporate Training</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <!-- <li><a href="#">Contact</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Course Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="separator"></div>
+            <div class="copyright">
+                <p>© 2025 SSS Training Academy. All rights reserved.</p>
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+    <!--  section   footer  ends here  -->
+
+
+    <script>
+        function toggleClass() {
+            const a = document.querySelector('.filter_course');
+            a.classList.toggle("active");
+        }
+        function handlesidebar() {
+            const hamburger = document.querySelector('.hamburger-icon');
+            const parent = hamburger.closest('.header-wrapper');
+            hamburger.classList.toggle('active');
+            if (hamburger.classList.contains('active')) {
+                parent.classList.add('active');
+            } else {
+                parent.classList.remove('active');
+            }
+            const icon = document.querySelector('.icon');
+
+            icon.addEventListener('click', function () {
+                parent.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+
+</html>
