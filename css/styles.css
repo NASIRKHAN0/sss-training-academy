@@ -98,7 +98,7 @@ header {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    font-family: "Urbanist";
+  
     line-height: 24px;
 
 
@@ -147,7 +147,7 @@ header {
 }
 
 .header-wrapper .header-socials button {
-    font-family: "Urbanist";
+  
     font-weight: 700;
 
     font-size: 14px;
@@ -173,7 +173,7 @@ header {
 .header-wrapper .header-socials button:last-child {
     background-color: #158338;
     color: #fff;
-    font-family: "Urbanist";
+  
     font-weight: 500;
     border: none;
     font-size: 14px;
@@ -232,7 +232,7 @@ header {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    font-family: "Urbanist";
+  
     line-height: 24px;
 
 }
@@ -270,7 +270,7 @@ header {
 
 .sidebar button {
     display: block;
-    font-family: "Urbanist";
+  
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -330,7 +330,11 @@ header {
 }
 
 .banner-content {
-    padding: 0px 20px;
+       padding: 0px 20px;
+        position: relative;
+        z-index: 2;
+       
+
 }
 
 .banner-top {
@@ -350,7 +354,7 @@ header {
 .banner-top p {
     margin-left: 20px;
     color: #fff;
-    font-family: "Urbanist";
+  
     font-weight: 800;
     font-size: 15px;
     line-height: 20px;
@@ -385,7 +389,7 @@ header {
 
 
 .banner-wrapper h2 {
-    font-family: "Urbanist";
+  
     font-weight: 700;
     font-size: 64px;
     color: #fff;
@@ -394,7 +398,7 @@ header {
 }
 
 .banner-wrapper p {
-    font-family: "Urbanist";
+  
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
@@ -410,7 +414,7 @@ header {
 .banner-wrapper button {
     padding: 8px 32px;
     background-color: #FAFAFA;
-    font-family: "Urbanist";
+  
     font-weight: 500;
     font-size: 18px;
     line-height: 28px;
@@ -424,12 +428,7 @@ header {
 
 }
 
-.banner-content {
-    position: relative;
-    z-index: 2;
-    /* above overlay */
 
-}
 
 .banner-bottom {
     padding: 32px 0px;
@@ -437,7 +436,7 @@ header {
 
 .banner-bottom p {
 
-    font-family: "Urbanist";
+  
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
@@ -452,7 +451,7 @@ header {
 .banner-bottom button {
     padding: 8px 32px;
     background-color: #FAFAFA;
-    font-family: "Urbanist";
+  
     font-weight: 500;
     font-size: 18px;
     line-height: 28px;
@@ -471,7 +470,7 @@ header {
 }
 
 .find-courses h3 {
-    font-family: "Urbanist";
+  
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
@@ -482,7 +481,7 @@ header {
 
 .find-courses p {
     color: #4B5563;
-    font-family: "Urbanist";
+  
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -565,7 +564,7 @@ header {
     display: block;
     width: 100%;
     text-align: start;
-    font-family: "Urbanist";
+  
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -578,7 +577,7 @@ header {
 
 .filter_course p {
     text-align: start;
-    font-family: "Urbanist";
+  
     font-weight: 400;
 
     font-size: 14px;
@@ -590,7 +589,7 @@ header {
 .filter_course button {
 
     background-color: #FAFAFA;
-    font-family: "Urbanist";
+  
     font-weight: 500;
     font-size: 18px;
     line-height: 28px;
@@ -646,7 +645,7 @@ header {
 }
 
 .course-list .course-item h6 {
-    font-family: "Urbanist";
+  
     font-weight: 600;
 
     font-size: 16px;
@@ -659,7 +658,7 @@ header {
 }
 
 .course-list .course-item span {
-    font-family: "Urbanist";
+  
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -685,12 +684,12 @@ header {
     position: relative;
 }
 
-.popular-course .content {
+.popular-course .card-course-content {
     padding: 24px;
 }
 
 .popular-courses h3 {
-    font-family: "Urbanist";
+  
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
@@ -700,7 +699,7 @@ header {
 }
 
 .popular-courses p {
-    font-family: "Urbanist";
+  
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -721,7 +720,7 @@ header {
     display: block;
 }
 
-.popular-course .content h3 {
+.popular-course .card-course-content h3 {
     font-family: 'Urbanist';
     font-weight: 700;
     font-size: 18px;
@@ -731,8 +730,8 @@ header {
     text-align: start;
 }
 
-.popular-course .content p {
-    font-family: "Urbanist";
+.popular-course .card-course-content p {
+  
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -740,14 +739,14 @@ header {
     text-align: start;
 }
 
-.popular-course .content .popular-course-bottom-wrapper {
+.popular-course .card-course-content .popular-course-bottom-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 16px;
 }
 
-.popular-course .content .popular-course-bottom-wrapper .popular-course-wrapper {
+.popular-course .card-course-content .popular-course-bottom-wrapper .popular-course-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -778,7 +777,7 @@ header {
     color: #FAFAFA;
     padding: 3px 11px;
     border-radius: 50px;
-    font-family: "Urbanist";
+  
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
@@ -800,7 +799,7 @@ header {
     color: #fff;
     padding: 8px 16px;
     border-radius: 6px;
-    font-family: "Urbanist";
+  
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -815,7 +814,7 @@ header {
 }
 
 .video-section h3 {
-    font-family: "Urbanist";
+  
     font-weight: 700;
     font-size: 30px;
     line-height: 40px;
@@ -824,7 +823,7 @@ header {
 }
 
 .video-section p {
-    font-family: "Urbanist";
+  
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -880,7 +879,7 @@ header {
 }
 
 .news-and-updates h3 {
-    font-family: "Urbanist";
+  
     font-weight: 700;
     font-size: 30px;
     line-height: 40px;
@@ -890,7 +889,7 @@ header {
 }
 
 .news-and-updates p {
-    font-family: "Urbanist";
+  
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -922,7 +921,7 @@ header {
 
 .news-card .news-top span {
     color: #18181B;
-    font-family: "Urbanist";
+  
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
@@ -959,7 +958,7 @@ header {
 
 .news-card p {
     color: #71717A;
-    font-family: "Urbanist";
+  
     font-weight: 400;
 
     font-size: 14px;
@@ -1005,7 +1004,7 @@ footer li a,
 footer p {
 
     color: #9CA3AF;
-    font-family: "Urbanist";
+  
     font-weight: 400;
     font-size: 16px;
 
@@ -1032,7 +1031,7 @@ footer h3 {
 
 .footer-links h3 {
     color: #FFFFFF;
-    font-family: "Urbanist";
+  
     font-weight: 600;
 
     font-size: 16px;
@@ -1141,7 +1140,7 @@ footer h3 {
         padding: 30px 0px 0px 0px;
     }
 
-    .popular-course .content h3 {
+    .popular-course .card-course-content h3 {
         font-size: 17px;
     }
 
@@ -1235,11 +1234,11 @@ footer h3 {
         padding: 30px 0px;
     }
 
-    .popular-course .content h3 {
+    .popular-course .card-course-content h3 {
         min-height: 56px;
     }
 
-    .popular-course .content h3 {
+    .popular-course .card-course-content h3 {
         font-size: 25px;
         line-height: 32px;
     }
@@ -1298,7 +1297,7 @@ footer h3 {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .popular-course .content h3 {
+    .popular-course .card-course-content h3 {
         font-size: 17px;
         line-height: 24px;
         min-height: unset;
